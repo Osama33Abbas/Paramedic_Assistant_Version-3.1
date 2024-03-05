@@ -1,0 +1,64 @@
+-- Create the database
+CREATE DATABASE IF NOT EXISTS paramedicassistantappdb;
+
+-- Use the database
+USE paramedicassistantappdb;
+
+-- Create the user_account table
+CREATE TABLE IF NOT EXISTS user_account (
+    account_id INT AUTO_INCREMENT PRIMARY KEY,
+    firstname VARCHAR(255) NOT NULL,
+    lastname VARCHAR(255) NOT NULL,
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+-- Insert data into the user_account table
+INSERT INTO user_account (firstname, lastname, username, password) VALUES
+('Osama', 'Abbas', 'OsamaAbbas', '1234'),
+('Ahmed', 'Almalki', 'AhmedAlmalki', '123'),
+('Tameem', 'Alotaibi', 'TameemAlotaibi', '12'),
+('Test', 'Test', 't', '0');
+
+-- Create the hospitals table
+CREATE TABLE IF NOT EXISTS hospitals (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    hospital_name VARCHAR(255) NOT NULL,
+    location VARCHAR(255) NOT NULL,
+    url VARCHAR(255) NOT NULL
+);
+
+-- Insert data into the hospitals table
+INSERT INTO hospitals (hospital_name, location, url) VALUES
+('King Faisal Hospital', 'Azizia', 'https://maps.app.goo.gl/QxoXTZAsaC43g4di8?g_st=ic'),
+('Al-Noor Specialist Hospital', 'Batha Quraish', 'https://maps.app.goo.gl/mohA98abNByAFr5X7?g_st=ic'),
+('Security Forces Hospital-Makkah', 'Al-Awali', 'https://maps.app.goo.gl/zT8Gsg5Yna3Q36WD8?g_st=ic'),
+('King Abdulaziz Hospital', 'Az Zahir', 'https://maps.app.goo.gl/148eAAdhvakgf8b57?g_st=ic');
+
+-- Create the user_responses table
+CREATE TABLE IF NOT EXISTS user_responses (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    gender VARCHAR(255) NOT NULL,
+    age_group VARCHAR(255) NOT NULL,
+    condition_severity VARCHAR(255) NOT NULL,
+    consciousness_level VARCHAR(255) NOT NULL,
+    chronic_illness_history INT NOT NULL,
+    current_medications INT NOT NULL,
+    previous_medical_conditions INT NOT NULL,
+    blood_sugar INT NOT NULL,
+    pressure INT NOT NULL,
+    additional_info VARCHAR(255) DEFAULT NULL
+);
+
+-- Insert data into the user_responses table
+INSERT INTO user_responses (gender, age_group, condition_severity, consciousness_level,
+    chronic_illness_history, current_medications, previous_medical_conditions,
+    blood_sugar, pressure, additional_info) VALUES
+('Male', 'Less than 12', 'Minor', 'Conscious', 1, 1, 1, 100, 100, 'No'),
+('Female', '22 - 40', 'Extreme', 'Conscious', 0, 0, 0, 0, 0, NULL),
+('Male', '12 - 21', 'Major', 'Conscious', 0, 0, 1, 111, 111, 'nothing'),
+('Male', 'Less than 12', 'Minor', 'Unconscious', 1, 1, 1, 100, 100, 'nothing');
+
+
+
+-- make sure to update the username & password in the DatabaseConnection.java Class
