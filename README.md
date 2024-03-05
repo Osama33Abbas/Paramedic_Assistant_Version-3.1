@@ -8,6 +8,8 @@ Devoleped by Health-Helpers team:
                     
       UI/UIX Assistant:Tameem Al-otaibi  
 
+Explanation video: https://www.youtube.com/watch?v=fGULsFalYaA
+
 The Paramedic Assistance Application (PA-app) is a proposed project aimed at improving emergency medical services by creating a user-friendly application for paramedics. The app intends to bridge communication gaps between paramedics and hospitals by providing quick access to comprehensive patient information and facilitating the selection of the most suitable hospital based on real-time capacity and medical needs. The goal is to enhance paramedic decision-making, improve communication, expedite patient transfer, and ultimately improve the overall quality and speed of emergency medical responses.
 
 This is a simple version of the application we present as our project for the Advanced Programming course. We will work on improving all the features, refining the user interface, optimizing database management, enhancing decision support algorithms, and implementing additional functionalities to create a more robust and comprehensive Paramedic Assistance Application. 
